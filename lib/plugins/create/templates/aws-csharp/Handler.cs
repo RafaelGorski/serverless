@@ -9,7 +9,7 @@ namespace AwsDotnetCsharp
     {
        public Response Hello(Request request)
        {
-           return new Response("Go Serverless v1.0! Your function executed successfully!", request);
+           return new Response("Go Serverless v1.0! Your function in .Net Core 2.1 executed successfully!", request);
        }
     }
 
