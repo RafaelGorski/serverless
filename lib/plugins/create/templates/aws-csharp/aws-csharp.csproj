@@ -7,6 +7,7 @@
     <!--Added by AWS Toolkit for Visual Studio on publish to AWS Lambda.-->
     <!--Tells the AWS Toolkit for Visual Studio that this is an AWS Lambda Project.-->
     <AWSProjectType>Lambda</AWSProjectType>
+    <RuntimeFrameworkVersion>2.1.2</RuntimeFrameworkVersion>
   </PropertyGroup>
   
   <ItemGroup>
