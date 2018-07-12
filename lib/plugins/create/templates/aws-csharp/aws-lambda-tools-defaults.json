@@ -1,0 +1,14 @@
+// framework has been changed from netcoreapp2.0 to netcoreapp2.1
+// function-runtime has been changed from dotnetcore2.0 to dotnetcore2.1
+{
+  "Information": [ "" ],
+  "region": "us-west-2",
+  "configuration": "Debug",
+  "framework": "netcoreapp2.1",
+  "function-runtime": "dotnetcore2.1",
+  "function-memory-size": 128,
+  "function-timeout": 30,
+  "function-handler": "DotNetCoreSampleFunction::DotNetCoreSampleFunction.TestDotNetCore::HelloWorld",
+  "function-name": "HelloWorld",
+  "tracing-mode": "PassThrough"
+}
