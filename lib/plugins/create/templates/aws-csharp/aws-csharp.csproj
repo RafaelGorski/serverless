@@ -1,19 +1,28 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <!--Changed from netcoreapp2.0.-->
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <AssemblyName>CsharpHandlers</AssemblyName>
-    <PackageId>aws-csharp</PackageId>
+    <!--Added by AWS Toolkit for Visual Studio on publish to AWS Lambda.-->
+    <!--Tells the AWS Toolkit for Visual Studio that this is an AWS Lambda Project.-->
+    <AWSProjectType>Lambda</AWSProjectType>
   </PropertyGroup>
-
+  
   <ItemGroup>
+    <!--Change to version 2.2.0 of Amazon.Lambda.Tools to get .NET Core 2.1 support for Lambda AWS-->
+    <!--This will be gone once the dotnet lambda CLI supports Global Tools.-->
+    <!--Tells the AWS Toolkit for Visual Studio that this is an AWS Lambda Project.-->
+    <DotNetCliToolReference Include="Amazon.Lambda.Tools" Version="2.2.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!--Change to use Microsoft.AspNetCore.App and reference version 2.1.0-->
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0"/>
     <PackageReference Include="Amazon.Lambda.Core" Version="1.0.0" />
-    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.1.0" />
+    <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="1.1.3" />
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="2.0.4" />
+    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.2.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <DotNetCliToolReference Include="Amazon.Lambda.Tools" Version="2.0.1" />
-  </ItemGroup>
-
+  
 </Project>
